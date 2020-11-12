@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <!-- Importar o CSS da library AOS -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <!--Importar fonte de ícones que o Materialize precisa-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Importar o materialize.css-->
+    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+    <!-- Importar o meu CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Importar fonte do google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
+  </head>
+</head>
+<body class="bg-themed">
+    <div class="container">
+        <nav class="no-shadows">
+            <div class="bg-themed nav-wrapper">
+                <img class="brand-logo left small-img" src="assets/imgs/logo.png" alt="Logo">
+                <ul id="nav-mobile" class="right hide-on-sm-and-down">
+                    <li><a onclick="focusOnElement('calc')" class="lato logo-themed bold">Quero descobrir meu IMC</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col m4 s12 overflow-hidden" data-aos="fade-up">
+                <div class="row no-margin-bottom lato">
+                    <h1 class="bold">O que é IMC?</h1>
+                </div>
+                <div class="row no-margin-bottom lato text-justify">
+                    <p>IMC significa Índice de Massa Corporal e é um parâmetro utilizado para saber se o peso está de acordo com a altura da pessoa, o que pode interferir diretamente na saúde e qualidade de vida da pessoa. Assim, a partir do resultado do IMC é possível saber também se a pessoa está dentro do peso ideal e também identificar obesidade ou desnutrição em crianças, adolescentes, adultos ou idosos.</p>
+                </div>
+            </div>
+            <div class="col m8 s12 overflow-hidden">
+                <img class="img-res" src="assets/imgs/figure-index.jpg" alt="">
+            </div>
+        </div>
+        <div class="row no-margin-bottom lato" id="results">
+            <div class="col m12 s12">
+                <div class="black-text" data-aos="fade-up">
+                        <div class="row no-margin-bottom">
+                            <h1 class="bold center-align overflow-hidden">Veja a interpretação do IMC:</h1>
+                        </div>
+                        <div class="row no-margin-bottom">
+                            <table class="centered responsive-table">
+                                <thead>
+                                    <tr>
+                                        <th>IMC</th>
+                                        <th>Classficação</th>
+                                        <th>Grau de obesidade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr id="0">
+                                        <td>Menor que 18,5</td>
+                                        <td>Magreza</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr id="1">
+                                        <td>Entre 18,5 e 24,9</td>
+                                        <td>Normal</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr id="2">
+                                        <td>Entre 25,0 e 29,9</td>
+                                        <td>Sobrepeso</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr id="3">
+                                        <td>Entre 30,0 e 39,9</td>
+                                        <td>Obesidade</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr id="4">
+                                        <td>Maior que 40,0</td>
+                                        <td>Obesidade grave</td>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="row no-margin-bottom lato" id="calc" data-aos="fade-up">
+            <div class="col m8 s12 overflow-hidden">
+                <img class="img-res" src="assets/imgs/figure-index2.png" alt="">
+            </div>
+            <div class="col m4 s12">
+                <div class="black-text">
+                    <div class="row no-margin-bottom">
+                        <h1 class="bold center-align">Descubra seu IMC!</h1>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m6">
+                            <input placeholder="Ex: 81,5" id="peso" type="number" class="validate">
+                            <label for="peso">Peso (KGs)</label>
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <input step="0.01" placeholder="Ex: 1,82" id="tamanho" type="number" class="validate">
+                            <label for="altura">Altura (Metros)</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="m6 s12">
+                            <button onclick="calcIMC()" class="waves-effect bg-logo-themed waves-light btn">Calcular</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer bg-logo-themed">
+        <div class="footer-copyright">
+          <div class="container center-align">
+            <a class="black-text"href='https://www.freepik.com/vectors/people'>People vector created by freepik and pch.vector - www.freepik.com</a>
+          </div>
+        </div>
+    </footer>
+    <!--Importar o JS do Materialize-->
+    <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+    <!-- Importar e iniciar o JS da library AOS -->
+    <script src="assets/js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Importar meu JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
