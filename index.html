@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de IMC</title>
+    <meta name="description" content="Um website simples, responsivo e bonito para realizar o calculo de IMC">
     <!-- Importar o CSS da library AOS -->
-    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/aos.css">
     <!--Importar fonte de ícones que o Materialize precisa-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Importar o materialize.css-->
@@ -29,17 +30,18 @@
         </nav>
         <div class="row">
             <div class="col m4 s12 overflow-hidden" data-aos="fade-up">
-                <div class="row no-margin-bottom lato">
-                    <h1 class="bold">O que é IMC?</h1>
-                </div>
-                <div class="row no-margin-bottom lato text-justify">
-                    <p>IMC significa Índice de Massa Corporal e é um parâmetro utilizado para saber se o peso está de acordo com a altura da pessoa, o que pode interferir diretamente na saúde e qualidade de vida da pessoa. Assim, a partir do resultado do IMC é possível saber também se a pessoa está dentro do peso ideal e também identificar obesidade ou desnutrição em crianças, adolescentes, adultos ou idosos.</p>
-                </div>
+                    <div class="row no-margin-bottom lato">
+                        <h1 class="bold">O que é IMC?</h1>
+                    </div>
+                    <div class="row no-margin-bottom lato text-justify">
+                        <p>IMC significa Índice de Massa Corporal e é um parâmetro utilizado para saber se o peso está de acordo com a altura da pessoa, o que pode interferir diretamente na saúde e qualidade de vida da pessoa. Assim, a partir do resultado do IMC é possível saber também se a pessoa está dentro do peso ideal e também identificar obesidade ou desnutrição em crianças, adolescentes, adultos ou idosos.</p>
+                    </div>
             </div>
             <div class="col m8 s12 overflow-hidden">
-                <img class="img-res" src="assets/imgs/figure-index.jpg" alt="">
+                <img class="img-res" src="assets/imgs/figure-index.jpg" alt="Desenho de pessoas andando de bicicleta">
             </div>
         </div>
+
         <div class="row no-margin-bottom lato" id="results">
             <div class="col m12 s12">
                 <div class="black-text" data-aos="fade-up">
@@ -87,33 +89,35 @@
                 </div>
             </div>
         </div>
+
         <div class="row no-margin-bottom lato" id="calc" data-aos="fade-up">
             <div class="col m8 s12 overflow-hidden">
-                <img class="img-res" src="assets/imgs/figure-index2.png" alt="">
+                <img class="img-res" src="assets/imgs/figure-index2.png" alt="Desenho de pessoas correndo">
             </div>
             <div class="col m4 s12">
-                <div class="black-text">
-                    <div class="row no-margin-bottom">
-                        <h1 class="bold center-align">Descubra seu IMC!</h1>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12 m6">
-                            <input placeholder="Ex: 81,5" id="peso" type="number" class="validate">
-                            <label for="peso">Peso (KGs)</label>
+                    <div class="black-text">
+                        <div class="row no-margin-bottom">
+                            <h1 class="bold center-align">Descubra seu IMC!</h1>
                         </div>
-                        <div class="input-field col s12 m6">
-                            <input step="0.01" placeholder="Ex: 1,82" id="tamanho" type="number" class="validate">
-                            <label for="altura">Altura (Metros)</label>
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <input placeholder="Ex: 81,5" id="peso" type="number" class="validate">
+                                <label for="peso">Peso (KGs)</label>
+                            </div>
+                            <div class="input-field col s12 m6">
+                                <input step="0.01" placeholder="Ex: 1,82" id="tamanho" type="number" class="validate">
+                                <label for="tamanho">Altura (Metros)</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="m6 s12">
+                                <button onclick="calcIMC()" class="waves-effect bg-logo-themed waves-light btn">Calcular</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="m6 s12">
-                            <button onclick="calcIMC()" class="waves-effect bg-logo-themed waves-light btn">Calcular</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
+
     </div>
     <footer class="page-footer bg-logo-themed">
         <div class="footer-copyright">
@@ -121,11 +125,11 @@
             <a class="black-text"href='https://www.freepik.com/vectors/people'>People vector created by freepik and pch.vector - www.freepik.com</a>
           </div>
         </div>
-    </footer>
+      </footer>
     <!--Importar o JS do Materialize-->
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
     <!-- Importar e iniciar o JS da library AOS -->
-    <script src="assets/js/aos.js"></script>
+    <script src="assets/aos.js"></script>
     <script>
         AOS.init();
     </script>
