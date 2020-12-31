@@ -11,10 +11,9 @@ function calcIMC(){
     console.log(peso);
 
     if(peso=="" || tamanho=="" || peso==0 || tamanho==0){
-        M.toast({html: 'Um (os ambos) os campos não foram preenchidos corretamente!'});
+        M.toast({html: 'Um (ou ambos) campo(s) não foram preenchido(s) corretamente!'});
     }else{
         var imc = peso / (tamanho*tamanho);
-        console.log(imc);
         var imc = imc.toFixed(2);
         M.toast({html: 'Seu IMC é '+ imc});
 
