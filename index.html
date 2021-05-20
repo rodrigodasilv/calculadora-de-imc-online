@@ -23,21 +23,21 @@
         <nav class="no-shadows">
             <div class="bg-themed nav-wrapper">
                 <img class="brand-logo left small-img" src="assets/imgs/logo.png" alt="Logo">
-                <ul id="nav-mobile" class="right hide-on-sm-and-down">
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a onclick="focusOnElement('calc')" class="lato logo-themed bold">Quero descobrir meu IMC</a></li>
                 </ul>
             </div>
         </nav>
-        <div class="row">
-            <div class="col m4 s12 overflow-hidden" data-aos="fade-up">
-                    <div class="row no-margin-bottom lato">
+        <div class="row no-margin-bottom lato">
+            <div class="col m5 s12 overflow-hidden" style="padding: 1em;" data-aos="fade-up">
+                    <div class="row no-margin-bottom">
                         <h1 class="bold">O que é IMC?</h1>
                     </div>
-                    <div class="row no-margin-bottom lato text-justify">
+                    <div class="row no-margin-bottom text-justify">
                         <p>IMC significa Índice de Massa Corporal e é um parâmetro utilizado para saber se o peso está de acordo com a altura da pessoa, o que pode interferir diretamente na saúde e qualidade de vida da pessoa. Assim, a partir do resultado do IMC é possível saber também se a pessoa está dentro do peso ideal e também identificar obesidade ou desnutrição em crianças, adolescentes, adultos ou idosos.</p>
                     </div>
             </div>
-            <div class="col m8 s12 overflow-hidden">
+            <div class="col m7 s12 overflow-hidden">
                 <img class="img-res" src="assets/imgs/figure-index.jpg" alt="Desenho de pessoas andando de bicicleta">
             </div>
         </div>
@@ -89,7 +89,6 @@
                 </div>
             </div>
         </div>
-
         <div class="row no-margin-bottom lato" id="calc" data-aos="fade-up">
             <div class="col m8 s12 overflow-hidden">
                 <img class="img-res" src="assets/imgs/figure-index2.png" alt="Desenho de pessoas correndo">
@@ -105,13 +104,13 @@
                                 <label for="peso">Peso (KGs)</label>
                             </div>
                             <div class="input-field col s12 m6">
-                                <input step="0.01" placeholder="Ex: 1,82" id="tamanho" type="number" class="validate">
-                                <label for="tamanho">Altura (Metros)</label>
+                                <input step="0.01" placeholder="Ex: 1,82" id="altura" type="number" class="validate">
+                                <label for="altura">Altura (Metros)</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="m6 s12">
-                                <button onclick="calcIMC()" class="waves-effect bg-logo-themed waves-light btn">Calcular</button>
+                                <button onclick="pessoa.calcIMC()" class="waves-effect bg-logo-themed waves-light btn">Calcular</button>
                             </div>
                         </div>
                     </div>
