@@ -22,7 +22,7 @@ function addClasses(elemento){
 }
 
 function verif_user(user){
-    if(user.peso=="" || user.altura=="" || user.peso==0 || user.altura==0){
+    if(user.peso=="" || user.altura=="" || user.peso<=0 || user.altura<=0){
         M.toast({html: 'Um (os ambos) os campos não foram preenchidos corretamente!'});
         return false;
     }else{
