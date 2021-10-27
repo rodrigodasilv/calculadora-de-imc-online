@@ -43,20 +43,16 @@ function show_results(user){
     remove_classes();
     if(user.imc<=18.49){
         elemento = document.getElementById("1");
-        addClasses(elemento);
     }else if(user.imc>=18.5 && user.imc<=24.99){
         elemento = document.getElementById("2");
-        addClasses(elemento);
     }else if(user.imc>=25 && user.imc<=29.9){
         elemento = document.getElementById("3");
-        addClasses(elemento);
     }else if(user.imc>=30 && user.imc<=39.99){
         elemento = document.getElementById("4");
-        addClasses(elemento);
     }else if(user.imc>39.99){
         elemento = document.getElementById("5");
-        addClasses(elemento);
     }
+    addClasses(elemento);
     // Muda o foco para a tabela
     focusOnElement('results');
 }
