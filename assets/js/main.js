@@ -23,7 +23,7 @@ function addClasses(elemento){
 
 function verif_user(user){
     if(user.peso=="" || user.altura=="" || user.peso<=0 || user.altura<=0){
-        M.toast({html: 'Um (os ambos) os campos não foram preenchidos corretamente!'});
+        M.toast({html: 'Um (ou ambos) os campos não foram preenchidos corretamente!'});
         return false;
     }else{
         return true;
@@ -31,7 +31,7 @@ function verif_user(user){
 }
 
 function remove_classes(){
-    for (itemDaLista=0; itemDaLista < 4; itemDaLista++) {
+    for (itemDaLista=0; itemDaLista <= 4; itemDaLista++) {
         element = document.getElementById(itemDaLista);
         element.classList.remove("bold");
         element.classList.remove("uppercase");
@@ -42,15 +42,15 @@ function show_results(user){
     M.toast({html: 'Seu IMC é '+ user.imc});
     remove_classes();
     if(user.imc<=18.49){
-        elemento = document.getElementById("1");
+        elemento = document.getElementById("0");
     }else if(user.imc>=18.5 && user.imc<=24.99){
-        elemento = document.getElementById("2");
+        elemento = document.getElementById("1");
     }else if(user.imc>=25 && user.imc<=29.9){
-        elemento = document.getElementById("3");
+        elemento = document.getElementById("2");
     }else if(user.imc>=30 && user.imc<=39.99){
-        elemento = document.getElementById("4");
+        elemento = document.getElementById("3");
     }else if(user.imc>39.99){
-        elemento = document.getElementById("5");
+        elemento = document.getElementById("4");
     }
     addClasses(elemento);
     // Muda o foco para a tabela
